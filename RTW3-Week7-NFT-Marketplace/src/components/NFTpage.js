@@ -22,7 +22,7 @@ async function getNFTData(tokenId) {
     let contract = new ethers.Contract(MarketplaceJSON.address, MarketplaceJSON.abi, signer)
     //create an NFT Token
     const tokenURI = await contract.tokenURI(tokenId);
-    const listedToken = await contract.getListedTokenForId(tokenId);
+    const listedToken = await contract.getListedTokenforId(tokenId);
     let meta = await axios.get(tokenURI);
     meta = meta.data;
     console.log(listedToken);
@@ -94,8 +94,8 @@ async function buyNFT(tokenId) {
                     </div>
                     <div>
                     { currAddress == data.owner || currAddress == data.seller ?
+                    <div className="text-emerald-700">You are the owner of this NFT</div>:
                         <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>Buy this NFT</button>
-                        : <div className="text-emerald-700">You are the owner of this NFT</div>
                     }
                     
                     <div className="text-green text-center mt-3">{message}</div>
