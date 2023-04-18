@@ -1,5 +1,6 @@
 import logo from '../logo_3.png';
 import fullLogo from '../full_logo.png';
+import leadsLogo from '../leads.png';
 import {
   BrowserRouter as Router,
   Switch,
@@ -74,30 +75,30 @@ useEffect(() => {
           <ul className='flex items-end justify-between py-3 bg-transparent text-white pr-5'>
           <li className='flex items-end ml-5 pb-2'>
             <Link to="/">
-            <img src={fullLogo} alt="" width={120} height={120} className="inline-block -mt-2"/>
+            <img src={leadsLogo} alt="" width={120} height={120} className="inline-block -mt-2"/>
             <div className='inline-block font-bold text-xl ml-2'>
               NFT Marketplace
             </div>
             </Link>
           </li>
-          <li className='w-2/6'>
+          <li className='w-3/6'>
             <ul className='lg:flex justify-between font-bold mr-10 text-lg'>
               {location.pathname === "/" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/">All NFTs</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/">All NFTs</Link>
               </li>              
               }
               {location.pathname === "/sellNFT" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/sellNFT">List My NFT</Link>
+                <Link to="/sellNFT">My NFTs</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/sellNFT">List My NFT</Link>
+                <Link to="/sellNFT">My NFTs</Link>
               </li>              
               }              
               {location.pathname === "/profile" ? 
