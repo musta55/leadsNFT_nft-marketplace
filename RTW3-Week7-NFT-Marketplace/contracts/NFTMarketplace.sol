@@ -15,7 +15,7 @@ contract NFTMarketplace is ERC721URIStorage {
 
     address payable owner;
 
-    uint256 listPrice = 0.01 ether;
+    uint256 listPrice = 0.001 ether;
 
     // Constructor
     constructor()  ERC721("NFTMarketplace", "NFTM") {
